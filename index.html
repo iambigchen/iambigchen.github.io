@@ -277,6 +277,145 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://iambigchen.github.io/2018/07/18/js对象引用问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="chen yu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chenyu_blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/18/js对象引用问题/" itemprop="url">
+                  js对象引用问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-18 19:23:03 / Modified: 20:09:44" itemprop="dateCreated datePublished" datetime="2018-07-18T19:23:03+08:00">2018-07-18</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">let a = [1,3]; </span><br><span class="line">let b = a; </span><br><span class="line">b[1] = 2; </span><br><span class="line">console.log(a,b)</span><br><span class="line">&#125;</span><br><span class="line">// [1,2] [1,2]</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let a = [1,3]; </span><br><span class="line">  let b = a; </span><br><span class="line">  b.push(3); </span><br><span class="line">  console.log(a,b)</span><br><span class="line">&#125;</span><br><span class="line">// [1,3,3] [1,3,3]</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let a = [1,3]; </span><br><span class="line">  let b = a; </span><br><span class="line">  a.push(3); </span><br><span class="line">  console.log(a,b)</span><br><span class="line">&#125;</span><br><span class="line">// [1,3,3] [1,3,3]</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let obj = &#123;a:10&#125;</span><br><span class="line">  let obj2 = obj</span><br><span class="line">  obj2.a = 20</span><br><span class="line">  console.log(obj, obj2)</span><br><span class="line">&#125;</span><br><span class="line">// &#123;a:20&#125; &#123;a:20&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let obj = &#123;a:10&#125;</span><br><span class="line">  let obj2 = obj</span><br><span class="line">  obj2.b = 20</span><br><span class="line">  console.log(obj, obj2)</span><br><span class="line">&#125;</span><br><span class="line">// &#123;a:10,b:20&#125; &#123;a:10,b:20&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let obj = &#123;a:10&#125;</span><br><span class="line">  let obj2 = obj</span><br><span class="line">  obj.b = 20</span><br><span class="line">  console.log(obj, obj2)</span><br><span class="line">&#125;</span><br><span class="line">// &#123;a:10,b:20&#125; &#123;a:10,b:20&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let a = &#123;</span><br><span class="line">    n: 1</span><br><span class="line">  &#125;</span><br><span class="line">  let b = a</span><br><span class="line">  a = &#123;</span><br><span class="line">    n: 2</span><br><span class="line">  &#125;</span><br><span class="line">  console.log(a,b)</span><br><span class="line">&#125;</span><br><span class="line">// &#123;n:2&#125; &#123;n:1&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let a = &#123;n:1&#125;; </span><br><span class="line">  let b = a; </span><br><span class="line">  a = &#123;n:2&#125;; </span><br><span class="line">  a.x = a ;</span><br><span class="line">  console.log(a, b)</span><br><span class="line">&#125;</span><br><span class="line">// &#123;n: 2, x: &#123;n:2, x: &#123;...&#125;&#125;&#125; &#123;n:1&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let a = &#123;</span><br><span class="line">    n: 1</span><br><span class="line">  &#125;</span><br><span class="line">  let b = a</span><br><span class="line">  a.x = a = &#123;n: 2&#125;</span><br><span class="line">  console.log(a,b)</span><br><span class="line">&#125;</span><br><span class="line">// &#123;n: 2&#125;  &#123;n:1, x: &#123;n:2&#125;&#125;</span><br><span class="line">// 运算符的优先级 . &gt; =  即：在a.x = a = &#123;n:2&#125;;中，先给对象a添加x属性，再进行a=&#123;n:2&#125;与a.x=&#123;n:2&#125;两个赋值操作</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let a = &#123;</span><br><span class="line">    n: &#123;</span><br><span class="line">      x: 1</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  let b = a.n</span><br><span class="line">  a.n.x = 2</span><br><span class="line">  console.log(a.n.x,b.x)</span><br><span class="line">&#125;</span><br><span class="line">// 2 2</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let a = &#123;</span><br><span class="line">    n: &#123;</span><br><span class="line">      x: 1</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  let b = &#123;</span><br><span class="line">    n: &apos;&apos;</span><br><span class="line">  &#125;</span><br><span class="line">  b = a.n</span><br><span class="line">  a.n.x = 2</span><br><span class="line">  console.log(a.n,b)</span><br><span class="line">&#125;</span><br><span class="line">// &#123;x: 2&#125; &#123;x: 2&#125;</span><br><span class="line">// 对象是引用类型，改变赋值只是改变指针的引用。运算符=相当于改变指针的指向，数组也一样，数组也是对象。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://iambigchen.github.io/2018/07/18/滚动条出现页面抖动/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1158,7 +1297,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1185,7 +1324,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">tags</span>
                   
                 </div>
