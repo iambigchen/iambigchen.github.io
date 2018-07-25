@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
-<meta name="keywords" content="es6 解构赋值">
+  <meta name="description" content="es6的箭头函数有个指向的问题，和其他函数的this指向有着明显的区别。一般函数的this指向是指执行该函数的运行对象12345678910var x=11;var obj=&amp;#123;  x:22,  say:function()&amp;#123;    console.log(this.x)  &amp;#125;&amp;#125;obj.say();//console.log输出的是22//这里的this指向的">
+<meta name="keywords" content="this es6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解构赋值">
-<meta property="og:url" content="https://iambigchen.github.io/2018/07/18/解构赋值/index.html">
+<meta property="og:title" content="this指向">
+<meta property="og:url" content="https://iambigchen.github.io/2018/07/21/this指向/index.html">
 <meta property="og:site_name" content="chenyu_blog">
-<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta property="og:description" content="es6的箭头函数有个指向的问题，和其他函数的this指向有着明显的区别。一般函数的this指向是指执行该函数的运行对象12345678910var x=11;var obj=&amp;#123;  x:22,  say:function()&amp;#123;    console.log(this.x)  &amp;#125;&amp;#125;obj.say();//console.log输出的是22//这里的this指向的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-18T06:49:53.053Z">
+<meta property="og:updated_time" content="2018-07-21T08:47:31.942Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解构赋值">
-<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta name="twitter:title" content="this指向">
+<meta name="twitter:description" content="es6的箭头函数有个指向的问题，和其他函数的this指向有着明显的区别。一般函数的this指向是指执行该函数的运行对象12345678910var x=11;var obj=&amp;#123;  x:22,  say:function()&amp;#123;    console.log(this.x)  &amp;#125;&amp;#125;obj.say();//console.log输出的是22//这里的this指向的">
 
 
 
 
 
 
-  <link rel="canonical" href="https://iambigchen.github.io/2018/07/18/解构赋值/"/>
+  <link rel="canonical" href="https://iambigchen.github.io/2018/07/21/this指向/"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>解构赋值 | chenyu_blog</title>
+  <title>this指向 | chenyu_blog</title>
   
 
 
@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://iambigchen.github.io/2018/07/18/解构赋值/">
+    <link itemprop="mainEntityOfPage" href="https://iambigchen.github.io/2018/07/21/this指向/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="chen yu">
@@ -298,7 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">解构赋值
+          <h1 class="post-title" itemprop="name headline">this指向
               
             
           </h1>
@@ -323,7 +323,7 @@
                 
               
 
-              <time title="Created: 2018-07-18 11:55:08 / Modified: 14:49:53" itemprop="dateCreated datePublished" datetime="2018-07-18T11:55:08+08:00">2018-07-18</time>
+              <time title="Created: 2018-07-21 16:17:18 / Modified: 16:47:31" itemprop="dateCreated datePublished" datetime="2018-07-21T16:17:18+08:00">2018-07-21</time>
             
 
             
@@ -361,7 +361,12 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line">// 分类 数组解构赋值 对象解构赋值 字符串解构赋值 布尔值解构赋值 函数参数解构赋值 数值解构赋值</span><br><span class="line">&#123;</span><br><span class="line">  let a,b,rest;</span><br><span class="line">  [a,b]=[1,2]</span><br><span class="line">  console.log(a,b)</span><br><span class="line">&#125;</span><br><span class="line">// 1 2</span><br><span class="line">&#123;</span><br><span class="line">  let a,b,rest;</span><br><span class="line">  [a,b,...rest] = [1,2,3,4,5,6]</span><br><span class="line">  console.log(a,b,rest)</span><br><span class="line">&#125;</span><br><span class="line">// 1 2 [3,4,5,6]</span><br><span class="line">&#123;</span><br><span class="line">  let a,b;</span><br><span class="line">  (&#123;a,b&#125; = &#123;a: 1,b:2&#125;)</span><br><span class="line">  console.log(a,b)</span><br><span class="line">&#125;</span><br><span class="line">//1 2</span><br><span class="line">&#123;</span><br><span class="line">  let a,b,c,rest;</span><br><span class="line">  [a,b, c=3]=[1,2]</span><br><span class="line">  console.log(a,b,c)</span><br><span class="line">&#125;</span><br><span class="line">//1 2 3</span><br><span class="line">&#123;</span><br><span class="line">  let a,b,c,rest;</span><br><span class="line">  [a,b, c]=[1,2]</span><br><span class="line">  console.log(a,b,c)</span><br><span class="line">&#125;</span><br><span class="line">//1 2 undefined</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let a = 1 ;</span><br><span class="line">  let b = 2 ;</span><br><span class="line">  [a,b] = [b,a]</span><br><span class="line">  console.log(a,b)</span><br><span class="line">&#125;</span><br><span class="line">// 2 1</span><br><span class="line">&#123;</span><br><span class="line">  function f() &#123;</span><br><span class="line">    return [1,2]</span><br><span class="line">  &#125;</span><br><span class="line">  let a,b;</span><br><span class="line">  [a,b] = f();</span><br><span class="line">  console.log(a,b)</span><br><span class="line">&#125;</span><br><span class="line">// 1 2</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  function f() &#123;</span><br><span class="line">    return [1,2,3,4]</span><br><span class="line">  &#125;</span><br><span class="line">  let a,b,c;</span><br><span class="line">  [a,,,c] = f()</span><br><span class="line">  console.log(a,c)</span><br><span class="line">&#125;</span><br><span class="line">// 1 4</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  function f() &#123;</span><br><span class="line">    return [1,2,3,4]</span><br><span class="line">  &#125;</span><br><span class="line">  let a,b,c;</span><br><span class="line">  [a,...c] = f()</span><br><span class="line">  console.log(a,c)</span><br><span class="line">&#125;</span><br><span class="line">// 1 [2,3,4]</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  function f() &#123;</span><br><span class="line">    return [1,2,3,4]</span><br><span class="line">  &#125;</span><br><span class="line">  let a,b,c;</span><br><span class="line">  [a,,...c] = f()</span><br><span class="line">  console.log(a,c)</span><br><span class="line">&#125;</span><br><span class="line">// 1 [3,4]</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let o = &#123;p:42,q: true&#125;</span><br><span class="line">  let &#123;p,q&#125; = o</span><br><span class="line">  console.log(p,q)</span><br><span class="line">&#125;</span><br><span class="line">//42 true</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let &#123;a=10,b=5&#125; = &#123;a:3&#125;</span><br><span class="line">  console.log(a,b)</span><br><span class="line">&#125;</span><br><span class="line">// 3,5</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let metaData = &#123;</span><br><span class="line">    title: &apos;abc&apos;,</span><br><span class="line">    test: [&#123;</span><br><span class="line">      title: &apos;test&apos;,</span><br><span class="line">      desc: &apos;descript&apos;</span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;</span><br><span class="line">  let &#123;title: esTitle,test: [&#123;title: cnTitle&#125;]&#125; = metaData</span><br><span class="line">  console.log(esTitle, cnTitle)</span><br><span class="line">&#125;</span><br><span class="line">// abc test</span><br></pre></td></tr></table></figure>
+        <p>es6的箭头函数有个指向的问题，和其他函数的this指向有着明显的区别。<br>一般函数的this指向是指执行该函数的运行对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var x=11;</span><br><span class="line">var obj=&#123;</span><br><span class="line">  x:22,</span><br><span class="line">  say:function()&#123;</span><br><span class="line">    console.log(this.x)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.say();</span><br><span class="line">//console.log输出的是22</span><br><span class="line">//这里的this指向的是obj，所以this.x是22</span><br></pre></td></tr></table></figure></p>
+<p>箭头函数的指向是指向运行该函数的父执行上下文的this,箭头函数中的this是在定义函数的时候绑定，而不是在执行函数的时候绑定。<br><figure class="highlight plain"><figcaption><span>箭头函数</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var x=11;</span><br><span class="line">var obj=&#123;</span><br><span class="line"> x:22,</span><br><span class="line"> say:()=&gt;&#123;</span><br><span class="line">   console.log(this.x);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.say();</span><br><span class="line">//输出的值为11</span><br><span class="line">//这里的this指向是obj的父执行上下文，即window，所以应该是11</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var a=11</span><br><span class="line">function test1()&#123;</span><br><span class="line">  this.a=22;</span><br><span class="line">  let b=function()&#123;</span><br><span class="line">    console.log(this.a);</span><br><span class="line">    console.log(this)</span><br><span class="line">  &#125;;</span><br><span class="line">  b();</span><br><span class="line">&#125;</span><br><span class="line">var x=new test1();</span><br><span class="line">//输出11</span><br><span class="line">// 这里的第一个this.a的this指向的是x，但是函数b的执行是在test1函数里window执行，</span><br><span class="line">//所以第二个this指向是window，所以为11</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var a=11;</span><br><span class="line">function test2()&#123;</span><br><span class="line">  this.a=22;</span><br><span class="line">  let b=()=&gt;&#123;console.log(this.a)&#125;</span><br><span class="line">  b();</span><br><span class="line">&#125;</span><br><span class="line">var x=new test2();</span><br><span class="line">//输出22</span><br><span class="line">// 这里的第一个this.a的this指向的是x，但是函数b的this是在定义b的时候绑定的，是绑定在其父执行上下文，所以指向是x</span><br></pre></td></tr></table></figure>
+<p>箭头函数中，this指向的固定化，并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的this，导致内部的this就是外层代码块的this。正是因为它没有this，所以也就不能用作构造函数。<br>原文地址：<a href="https://blog.csdn.net/liwusen/article/details/70257837" target="_blank" rel="noopener">https://blog.csdn.net/liwusen/article/details/70257837</a></p>
+
       
     </div>
 
@@ -381,7 +386,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/es6-解构赋值/" rel="tag"># es6 解构赋值</a>
+            <a href="/tags/this-es6/" rel="tag"># this es6</a>
           
         </div>
       
@@ -394,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/18/es6_let_const/" rel="next" title="es6 let const">
-                <i class="fa fa-chevron-left"></i> es6 let const
+              <a href="/2018/07/21/es6函数扩展/" rel="next" title="es6函数扩展">
+                <i class="fa fa-chevron-left"></i> es6函数扩展
               </a>
             
           </div>
@@ -404,8 +409,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/18/es6正则/" rel="prev" title="es6正则">
-                es6正则 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/21/es6对象扩展/" rel="prev" title="es6对象扩展">
+                es6对象扩展 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

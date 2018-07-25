@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
-<meta name="keywords" content="es6 解构赋值">
+  <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&amp;#123;  console.log(0b101010)//二进制  console.log(0B101010)//二进制  console.log(0o11010)//八进制  cons">
+<meta name="keywords" content="es6 数值">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解构赋值">
-<meta property="og:url" content="https://iambigchen.github.io/2018/07/18/解构赋值/index.html">
+<meta property="og:title" content="es6数值扩展">
+<meta property="og:url" content="https://iambigchen.github.io/2018/07/19/es6数值扩展/index.html">
 <meta property="og:site_name" content="chenyu_blog">
-<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&amp;#123;  console.log(0b101010)//二进制  console.log(0B101010)//二进制  console.log(0o11010)//八进制  cons">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-18T06:49:53.053Z">
+<meta property="og:updated_time" content="2018-07-21T07:09:15.101Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解构赋值">
-<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta name="twitter:title" content="es6数值扩展">
+<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&amp;#123;  console.log(0b101010)//二进制  console.log(0B101010)//二进制  console.log(0o11010)//八进制  cons">
 
 
 
 
 
 
-  <link rel="canonical" href="https://iambigchen.github.io/2018/07/18/解构赋值/"/>
+  <link rel="canonical" href="https://iambigchen.github.io/2018/07/19/es6数值扩展/"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>解构赋值 | chenyu_blog</title>
+  <title>es6数值扩展 | chenyu_blog</title>
   
 
 
@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://iambigchen.github.io/2018/07/18/解构赋值/">
+    <link itemprop="mainEntityOfPage" href="https://iambigchen.github.io/2018/07/19/es6数值扩展/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="chen yu">
@@ -298,7 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">解构赋值
+          <h1 class="post-title" itemprop="name headline">es6数值扩展
               
             
           </h1>
@@ -323,12 +323,24 @@
                 
               
 
-              <time title="Created: 2018-07-18 11:55:08 / Modified: 14:49:53" itemprop="dateCreated datePublished" datetime="2018-07-18T11:55:08+08:00">2018-07-18</time>
+              <time title="Created: 2018-07-19 17:20:36" itemprop="dateCreated datePublished" datetime="2018-07-19T17:20:36+08:00">2018-07-19</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-21 15:09:15" itemprop="dateModified" datetime="2018-07-21T15:09:15+08:00">2018-07-21</time>
               
             
           </span>
@@ -361,7 +373,7 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line">// 分类 数组解构赋值 对象解构赋值 字符串解构赋值 布尔值解构赋值 函数参数解构赋值 数值解构赋值</span><br><span class="line">&#123;</span><br><span class="line">  let a,b,rest;</span><br><span class="line">  [a,b]=[1,2]</span><br><span class="line">  console.log(a,b)</span><br><span class="line">&#125;</span><br><span class="line">// 1 2</span><br><span class="line">&#123;</span><br><span class="line">  let a,b,rest;</span><br><span class="line">  [a,b,...rest] = [1,2,3,4,5,6]</span><br><span class="line">  console.log(a,b,rest)</span><br><span class="line">&#125;</span><br><span class="line">// 1 2 [3,4,5,6]</span><br><span class="line">&#123;</span><br><span class="line">  let a,b;</span><br><span class="line">  (&#123;a,b&#125; = &#123;a: 1,b:2&#125;)</span><br><span class="line">  console.log(a,b)</span><br><span class="line">&#125;</span><br><span class="line">//1 2</span><br><span class="line">&#123;</span><br><span class="line">  let a,b,c,rest;</span><br><span class="line">  [a,b, c=3]=[1,2]</span><br><span class="line">  console.log(a,b,c)</span><br><span class="line">&#125;</span><br><span class="line">//1 2 3</span><br><span class="line">&#123;</span><br><span class="line">  let a,b,c,rest;</span><br><span class="line">  [a,b, c]=[1,2]</span><br><span class="line">  console.log(a,b,c)</span><br><span class="line">&#125;</span><br><span class="line">//1 2 undefined</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let a = 1 ;</span><br><span class="line">  let b = 2 ;</span><br><span class="line">  [a,b] = [b,a]</span><br><span class="line">  console.log(a,b)</span><br><span class="line">&#125;</span><br><span class="line">// 2 1</span><br><span class="line">&#123;</span><br><span class="line">  function f() &#123;</span><br><span class="line">    return [1,2]</span><br><span class="line">  &#125;</span><br><span class="line">  let a,b;</span><br><span class="line">  [a,b] = f();</span><br><span class="line">  console.log(a,b)</span><br><span class="line">&#125;</span><br><span class="line">// 1 2</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  function f() &#123;</span><br><span class="line">    return [1,2,3,4]</span><br><span class="line">  &#125;</span><br><span class="line">  let a,b,c;</span><br><span class="line">  [a,,,c] = f()</span><br><span class="line">  console.log(a,c)</span><br><span class="line">&#125;</span><br><span class="line">// 1 4</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  function f() &#123;</span><br><span class="line">    return [1,2,3,4]</span><br><span class="line">  &#125;</span><br><span class="line">  let a,b,c;</span><br><span class="line">  [a,...c] = f()</span><br><span class="line">  console.log(a,c)</span><br><span class="line">&#125;</span><br><span class="line">// 1 [2,3,4]</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  function f() &#123;</span><br><span class="line">    return [1,2,3,4]</span><br><span class="line">  &#125;</span><br><span class="line">  let a,b,c;</span><br><span class="line">  [a,,...c] = f()</span><br><span class="line">  console.log(a,c)</span><br><span class="line">&#125;</span><br><span class="line">// 1 [3,4]</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let o = &#123;p:42,q: true&#125;</span><br><span class="line">  let &#123;p,q&#125; = o</span><br><span class="line">  console.log(p,q)</span><br><span class="line">&#125;</span><br><span class="line">//42 true</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let &#123;a=10,b=5&#125; = &#123;a:3&#125;</span><br><span class="line">  console.log(a,b)</span><br><span class="line">&#125;</span><br><span class="line">// 3,5</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  let metaData = &#123;</span><br><span class="line">    title: &apos;abc&apos;,</span><br><span class="line">    test: [&#123;</span><br><span class="line">      title: &apos;test&apos;,</span><br><span class="line">      desc: &apos;descript&apos;</span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;</span><br><span class="line">  let &#123;title: esTitle,test: [&#123;title: cnTitle&#125;]&#125; = metaData</span><br><span class="line">  console.log(esTitle, cnTitle)</span><br><span class="line">&#125;</span><br><span class="line">// abc test</span><br></pre></td></tr></table></figure>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  console.log(0b101010)//二进制</span><br><span class="line">  console.log(0B101010)//二进制</span><br><span class="line">  console.log(0o11010)//八进制</span><br><span class="line">  console.log(0O11010)//八进制</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  console.log(Number.isFinite(12));  //判断数值是否有尽</span><br><span class="line">  console.log(Number.isFinite(NaN));  //判断数值是否有尽</span><br><span class="line">  console.log(Number.isFinite(1/0));  //判断数值是否有尽</span><br><span class="line">  console.log(Number.isNaN(NaN)) // 是否是NaN</span><br><span class="line">&#125;</span><br><span class="line">// true false false true</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  //判断是否是整数</span><br><span class="line">  console.log(&apos;25&apos;, Number.isInteger(25));</span><br><span class="line">  console.log(&apos;25&apos;, Number.isInteger(25.000));</span><br><span class="line">  console.log(&apos;25&apos;, Number.isInteger(25.1));</span><br><span class="line">  console.log(&apos;25&apos;, Number.isInteger(&apos;25&apos;));</span><br><span class="line">&#125;</span><br><span class="line">// true true false false -2^53 &lt;Number&lt; 2^53</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  console.log(Number.MAX_SAFE_INTEGER);//数最大上限 2^53</span><br><span class="line">  console.log(Number.MIN_SAFE_INTEGER);//数最小上限 -2^53</span><br><span class="line">  console.log(Number.isSafeInteger(10));// 判断数是否在这个范围内，是否安全</span><br><span class="line">  console.log(Number.isSafeInteger(9007199254740992));// 判断数是否在这个范围内，是否安全</span><br><span class="line">  console.log(Number.isSafeInteger(9007199254740991));// 判断数是否在这个范围内，是否安全</span><br><span class="line">  console.log(Number.isSafeInteger(&apos;9007199254740991&apos;));// 判断数是否在这个范围内，是否安全</span><br><span class="line">&#125;</span><br><span class="line">// 9007199254740991 -9007199254740991 true false true false</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  //判断带小数的整数部分</span><br><span class="line">  console.log(4.1, Math.trunc(4.1))</span><br><span class="line">  console.log(4.1, Math.trunc(4.9))</span><br><span class="line">&#125;</span><br><span class="line">// 4 4</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  // 判断一个数正负</span><br><span class="line">  console.log(&apos;-4&apos;, Math.sign(-4))</span><br><span class="line">  console.log(&apos;0&apos;, Math.sign(0))</span><br><span class="line">  console.log(&apos;4&apos;, Math.sign(4))</span><br><span class="line">  console.log(&apos;a&apos;, Math.sign(&apos;a&apos;))</span><br><span class="line">  console.log(&apos;40&apos;, Math.sign(&apos;40&apos;))</span><br><span class="line">&#125;</span><br><span class="line">// -1 0 1 NaN 1</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  // 立方根计算</span><br><span class="line">  console.log(Math.cbrt(-1));</span><br><span class="line">  console.log(Math.cbrt(8));</span><br><span class="line">&#125;</span><br><span class="line">// -1 2</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -381,7 +393,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/es6-解构赋值/" rel="tag"># es6 解构赋值</a>
+            <a href="/tags/es6-数值/" rel="tag"># es6 数值</a>
           
         </div>
       
@@ -394,8 +406,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/18/es6_let_const/" rel="next" title="es6 let const">
-                <i class="fa fa-chevron-left"></i> es6 let const
+              <a href="/2018/07/19/es6字符串扩展/" rel="next" title="es6字符串扩展">
+                <i class="fa fa-chevron-left"></i> es6字符串扩展
               </a>
             
           </div>
@@ -404,8 +416,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/18/es6正则/" rel="prev" title="es6正则">
-                es6正则 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/21/es6数组扩展/" rel="prev" title="es6数组扩展">
+                es6数组扩展 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
